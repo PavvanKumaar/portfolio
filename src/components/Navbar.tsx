@@ -35,7 +35,7 @@ export default function Navbar() {
         background: scrolled ? "rgba(4, 4, 13, 0.85)" : "transparent",
         backdropFilter: scrolled ? "blur(16px)" : "none",
         WebkitBackdropFilter: scrolled ? "blur(16px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(255,255,255,0.07)" : "1px solid transparent",
+        borderBottom: scrolled ? "1px solid rgba(242, 89, 18, 0.15)" : "1px solid transparent",
       }}
     >
       <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingBlock: "1rem" }}>
@@ -78,7 +78,7 @@ export default function Navbar() {
               }}
               onMouseEnter={(e) => {
                 (e.target as HTMLElement).style.color = "var(--foreground)";
-                (e.target as HTMLElement).style.background = "var(--surface-2)";
+                (e.target as HTMLElement).style.background = "rgba(92, 62, 148, 0.18)";
               }}
               onMouseLeave={(e) => {
                 (e.target as HTMLElement).style.color = "var(--muted)";
