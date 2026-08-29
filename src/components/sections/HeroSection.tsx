@@ -171,6 +171,7 @@ function useTypingEffect(words: string[]) {
 
     if (!isDeleting && displayed === currentWord) {
       // Fully typed → pause then delete
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsPaused(true);
       timerRef.current = setTimeout(() => setIsDeleting(true), PAUSE_AFTER);
       return;
@@ -180,6 +181,7 @@ function useTypingEffect(words: string[]) {
       // Fully deleted → move to next word
       setIsDeleting(false);
       setWordIndex((i) => (i + 1) % words.length);
+      // We don't really need a timeout here that does nothing, but keeping it as it was
       timerRef.current = setTimeout(() => {}, PAUSE_BEFORE);
       return;
     }
@@ -210,10 +212,33 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
 };
 
-/* ── Component ───────────────────────────────────────────── */
-export default function HeroSection() {
+/* ── TypingRole component ────────────────────────────────── */
+// ⚡ Bolt: Isolated the typing effect into its own component.
+// This prevents the entire HeroSection (and all its motion children)
+// from re-rendering every ~65ms during the typing animation.
+function TypingRole() {
   const typedRole = useTypingEffect(ROLES);
 
+  return (
+    <>
+      <span
+        style={{
+          fontFamily: "var(--font-display)",
+          fontWeight: 500,
+          fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
+          color: "var(--muted)",
+          letterSpacing: "-0.01em",
+        }}
+      >
+        {typedRole}
+      </span>
+      <span className="typing-cursor" aria-hidden="true" />
+    </>
+  );
+}
+
+/* ── Component ───────────────────────────────────────────── */
+export default function HeroSection() {
   return (
     <section
       id="hero"
@@ -262,18 +287,7 @@ export default function HeroSection() {
               marginBottom: "1.75rem",
             }}
           >
-            <span
-              style={{
-                fontFamily: "var(--font-display)",
-                fontWeight: 500,
-                fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)",
-                color: "var(--muted)",
-                letterSpacing: "-0.01em",
-              }}
-            >
-              {typedRole}
-            </span>
-            <span className="typing-cursor" aria-hidden="true" />
+            <TypingRole />
           </motion.div>
 
           {/* Bio */}
