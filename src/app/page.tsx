@@ -10,9 +10,15 @@ import ProjectsSection from "@/components/sections/ProjectsSection";
 export default function Home() {
   return (
     <SmoothScrollProvider>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[var(--purple-dark)] focus:text-white focus:rounded focus:outline-none focus:ring-2 focus:ring-[var(--orange)]"
+      >
+        Skip to content
+      </a>
       <Navbar />
 
-      <main>
+      <main id="main-content">
         {/* ── Hero ──────────────────────────────────────────── */}
         <HeroSection />
 
