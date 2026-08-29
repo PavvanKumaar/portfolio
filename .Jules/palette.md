@@ -1,0 +1,3 @@
+## 2024-05-18 - Keyboard Support for Custom Interactive Elements
+**Learning:** In React components using `role="button"` on `div` elements, adding `tabIndex={0}` and `onKeyDown` with `Enter` key support is a common pattern for screen reader access. However, native buttons also support the `Space` key. It is easy to overlook that implementing the `Space` key requires explicitly calling `e.preventDefault()` to stop the browser from scrolling down the page.
+**Action:** When auditing custom `div` elements acting as buttons, always verify if the `Space` key is handled along with `Enter` and ensure scrolling side effects are mitigated.

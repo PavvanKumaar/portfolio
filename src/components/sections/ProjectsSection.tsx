@@ -83,7 +83,12 @@ function ProjectCard({
       aria-expanded={isExpanded}
       aria-controls={`project-detail-${project.id}`}
       tabIndex={0}
-      onKeyDown={(e) => e.key === "Enter" && onToggle()}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          if (e.key === " ") e.preventDefault();
+          onToggle();
+        }
+      }}
     >
       {/* ── Card header (always visible) ── */}
       <div style={{ padding: "1.5rem" }}>
