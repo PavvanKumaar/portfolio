@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState, useEffect } from "react";
 import { siteConfig } from "@/lib/site-data";
 
@@ -40,20 +39,20 @@ export default function Navbar() {
     >
       <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingBlock: "1rem" }}>
         {/* Logo */}
-        <Link
-          href="#"
+        <a
+          href="#hero"
+          aria-label="Back to top"
           style={{
             fontFamily: "var(--font-display)",
             fontWeight: 700,
-            fontSize: "1.2rem",
+            fontSize: "1.3rem",
             letterSpacing: "-0.03em",
             textDecoration: "none",
             color: "var(--foreground)",
           }}
         >
-          <span className="gradient-text">{siteConfig.initials}</span>
-          <span style={{ color: "var(--muted)", fontWeight: 400 }}>.dev</span>
-        </Link>
+          <span className="gradient-text">PBK</span>
+        </a>
 
         {/* Desktop nav */}
         <nav
