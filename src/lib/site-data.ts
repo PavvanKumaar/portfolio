@@ -9,8 +9,8 @@ export const siteConfig = {
   tagline: "Full-Stack Developer · Flutter · React · FastAPI",
   bio: "3rd-year Integrated M.Sc. Software Systems student at PSG College of Technology, Coimbatore. I build full-stack web apps, cross-platform mobile apps, and love creating polished design work on the side.",
   email: "inboxofpbk@gmail.com",
-  linkedin: "https://linkedin.com", // update with real URL
-  github: "https://github.com",    // update with real URL
+  linkedin: "https://www.linkedin.com/in/b-pavvan-kumaar-5638ab294/",
+  github: "https://github.com/PavvanKumaar",
   resumeUrl: "/resume/Pavvan_Kumaar_Resume.pdf",
 } as const;
 
