@@ -29,12 +29,49 @@ export default function Home() {
           <div className="container">
             <p className="section-label">About me</p>
             <h2>The person behind the code</h2>
-            <p style={{ marginTop: "1.25rem", maxWidth: "580px" }}>
-              3rd-year Integrated M.Sc. Software Systems student at PSG College of Technology,
-              Coimbatore. I build full-stack web apps, cross-platform mobile apps,
-              and create design work on the side as Deputy Coordinator of the college&apos;s
-              Graphic Design Team.
-            </p>
+            <ul
+              style={{
+                marginTop: "1.5rem",
+                maxWidth: "560px",
+                listStyle: "none",
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.85rem",
+              }}
+            >
+              {[
+                "3rd-year Integrated M.Sc. Software Systems student at PSG College of Technology, Coimbatore.",
+                "Build full-stack web apps and APIs using React, Node.js, FastAPI, and more.",
+                "Cross-platform mobile development with Flutter and Dart.",
+                "Deputy Coordinator of the college's Graphic Design Team — video editing and visual content creation.",
+              ].map((point) => (
+                <li
+                  key={point}
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "0.75rem",
+                    color: "var(--muted)",
+                    fontSize: "0.95rem",
+                    lineHeight: 1.65,
+                  }}
+                >
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      display: "inline-block",
+                      width: "6px",
+                      height: "6px",
+                      borderRadius: "50%",
+                      background: "var(--orange)",
+                      flexShrink: 0,
+                      marginTop: "0.52em",
+                    }}
+                  />
+                  {point}
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
