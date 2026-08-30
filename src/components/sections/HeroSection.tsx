@@ -98,10 +98,8 @@ function CursorBlobs() {
 /* ── Typing roles ────────────────────────────────────────── */
 const ROLES = [
   "Full-Stack Developer",
-  "Flutter Developer",
-  "React Developer",
-  "FastAPI Developer",
   "UI/UX Designer",
+  "Frontend Developer",
 ];
 
 const TYPE_SPEED   = 65;  // ms per char (typing)
