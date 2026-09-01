@@ -6,12 +6,12 @@
 export const siteConfig = {
   name: "B Pavvan Kumaar",
   initials: "PK",
-  tagline: "Full-Stack Developer · Flutter · React · FastAPI",
+  tagline: "Full-Stack Developer · Flutter · React",
   bio: "3rd-year Integrated M.Sc. Software Systems student at PSG College of Technology, Coimbatore. I build full-stack web apps, cross-platform mobile apps, and love creating polished design work on the side.",
   email: "inboxofpbk@gmail.com",
   linkedin: "https://www.linkedin.com/in/b-pavvan-kumaar-5638ab294/",
   github: "https://github.com/PavvanKumaar",
-  resumeUrl: "/resume/Pavvan_Kumaar_Resume.pdf",
+  resumeUrl: "/resume/Resume_24pw08_Pavvan_Kumaar.pdf",
 } as const;
 
 export const education = [
@@ -39,15 +39,15 @@ export type SkillCategory = {
 export const skillCategories: SkillCategory[] = [
   {
     label: "Languages",
-    skills: ["Python", "Java", "C++", "C", "JavaScript", "Dart"],
+    skills: ["Python", "Java", "C++", "JavaScript", "Dart"],
   },
   {
     label: "Frameworks & Tools",
-    skills: ["Flutter", "React.js", "Express.js", "Spring MVC", "FastAPI", "Docker", "Git", "Postman"],
+    skills: ["Flutter", "React.js", "Express.js", "Spring MVC", "Docker", "Git", "Postman"],
   },
   {
     label: "Databases",
-    skills: ["MySQL", "MongoDB", "PostgreSQL", "Redis"],
+    skills: ["MySQL", "MongoDB"],
   },
   {
     label: "Platforms",

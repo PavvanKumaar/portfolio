@@ -310,6 +310,7 @@ export default function HeroSection() {
               href={siteConfig.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
+              download="Resume_24pw08_Pavvan_Kumaar.pdf"
               className="btn btn-primary"
             >
               <ResumeRedirectIcon />

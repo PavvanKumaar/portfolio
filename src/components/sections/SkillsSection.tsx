@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import {
   SiPython, SiReact, SiFlutter, SiDart, SiJavascript,
-  SiDocker, SiGit, SiPostman, SiMongodb, SiPostgresql,
-  SiRedis, SiMysql, SiFastapi, SiSpring, SiLinux,
-  SiC, SiCplusplus, SiExpress, SiNodedotjs,
+  SiDocker, SiGit, SiPostman, SiMongodb,
+  SiMysql, SiSpring, SiLinux,
+  SiCplusplus, SiExpress,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { FaWindows } from "react-icons/fa6";
@@ -31,7 +31,6 @@ const CATEGORIES: Category[] = [
       { name: "Python",     Icon: SiPython,     iconColor: "#4B8BBE" },
       { name: "Java",       Icon: FaJava,        iconColor: "#ED8B00" },
       { name: "C++",        Icon: SiCplusplus,   iconColor: "#00599C" },
-      { name: "C",          Icon: SiC,           iconColor: "#555599" },
       { name: "JavaScript", Icon: SiJavascript,  iconColor: "#F7DF1E" },
       { name: "Dart",       Icon: SiDart,        iconColor: "#0175C2" },
     ],
@@ -41,9 +40,7 @@ const CATEGORIES: Category[] = [
     skills: [
       { name: "Flutter",    Icon: SiFlutter,     iconColor: "#54C5F8" },
       { name: "React.js",   Icon: SiReact,       iconColor: "#61DAFB" },
-      { name: "Node.js",    Icon: SiNodedotjs,   iconColor: "#339933" },
       { name: "Express.js", Icon: SiExpress,     iconColor: "#999999" },
-      { name: "FastAPI",    Icon: SiFastapi,     iconColor: "#009688" },
       { name: "Spring MVC", Icon: SiSpring,      iconColor: "#6DB33F" },
       { name: "Docker",     Icon: SiDocker,      iconColor: "#2496ED" },
       { name: "Git",        Icon: SiGit,         iconColor: "#F05032" },
@@ -55,8 +52,6 @@ const CATEGORIES: Category[] = [
     skills: [
       { name: "MySQL",      Icon: SiMysql,       iconColor: "#4479A1" },
       { name: "MongoDB",    Icon: SiMongodb,     iconColor: "#47A248" },
-      { name: "PostgreSQL", Icon: SiPostgresql,  iconColor: "#336791" },
-      { name: "Redis",      Icon: SiRedis,       iconColor: "#DC382D" },
     ],
   },
   {

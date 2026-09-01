@@ -141,7 +141,7 @@ export default function Home() {
             color: "var(--subtle)",
           }}
         >
-          © {new Date().getFullYear()} B Pavvan Kumaar · Built with Next.js &amp; Tailwind
+          © {new Date().getFullYear()} B Pavvan Kumaar
         </footer>
       </main>
     </SmoothScrollProvider>
